@@ -1,0 +1,15 @@
+FROM node:10
+
+RUN mkdir -p /src/descriptionservice
+#App directory
+WORKDIR /src/descriptionservice
+
+COPY . /src/descriptionservice
+
+RUN npm install
+
+EXPOSE 8081
+
+RUN echo 'Hello!!!!!'
+
+CMD npm run docker-start
